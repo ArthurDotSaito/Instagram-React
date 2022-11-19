@@ -1,81 +1,23 @@
 export default function Stories() {
+    let storyContent = [
+        {user: "9gag", image:"assets/img/9gag.svg"},
+        {user: "meowed", image:"assets/img/meowed.svg"},
+        {user: "barked", image:"assets/img/barked.svg"},
+        {user: "nathanwpylestrangeplanet", image:"assets/img/nathanwpylestrangeplanet.svg"},
+        {user: "wawawicomics", image:"assets/img/wawawicomics.svg"},
+        {user: "respondeai", image:"assets/img/respondeai.svg"},
+        {user: "filomoderna", image:"assets/img/filomoderna.svg"},
+        {user: "memeriagourmet", image:"assets/img/memeriagourmet.svg"}
+    ]
+
     return (
         <div className="stories">
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/9gag.svg" />
+            {storyContent.map((sc) => (
+                <div className="story">
+                    <div className="image"><img src={sc.image}/></div>
+                    <div className="usuario">{sc.user}</div>
                 </div>
-                <div className="usuario">
-                    9gag
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/meowed.svg" />
-                </div>
-                <div className="usuario">
-                    meowed
-                </div>
-            </div>
-
-            <div class="story">
-                <div className="imagem">
-                    <img src="assets/img/barked.svg" />
-                </div>
-                <div className="usuario">
-                    barked
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/nathanwpylestrangeplanet.svg" />
-                </div>
-                <div className="usuario">
-                    nathanwpylestrangeplanet
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/wawawicomics.svg" />
-                </div>
-                <div className="usuario">
-                    wawawicomics
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/respondeai.svg" />
-                </div>
-                <div className="usuario">
-                    respondeai
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/filomoderna.svg" />
-                </div>
-                <div className="usuario">
-                    filomoderna
-                </div>
-            </div>
-
-            <div className="story">
-                <div className="imagem">
-                    <img src="assets/img/memeriagourmet.svg" />
-                </div>
-                <div className="usuario">
-                    memeriagourmet
-                </div>
-            </div>
-
-            <div className="setinha">
-                <ion-icon name="chevron-forward-circle"></ion-icon>
-            </div>
+            ))}
         </div>
     )
 }
