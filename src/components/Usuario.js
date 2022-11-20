@@ -33,8 +33,17 @@ export default function Usuario() {
     }
 
     function changeUserImage(){
-        const changeImage = prompt("Digite o path para nova imagem:")
-        setImage(changeImage);
+        let changeImage = prompt("Digite a URL para nova imagem:")
+        checkURL(changeImage);
+
+        function checkURL(string){
+            try{
+                changeImage = new URL(string)
+                setImage(changeImage);
+            }catch{
+                alert("URL inválida!")
+            }
+        }
     }
 }
 
