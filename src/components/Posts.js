@@ -9,7 +9,7 @@ export default function Posts() {
       userContent: "assets/img/gato-telefone.svg", 
       userLikes: "assets/img/respondeai.svg", 
       likedBy: "respondeai", 
-      likedByCount: "outras 101.523 pessoas"
+      likedByCount: 101523
     },
 
     {
@@ -18,7 +18,7 @@ export default function Posts() {
       userContent: "assets/img/dog.svg", 
       userLikes: "assets/img/adorable_animals.svg", 
       likedBy: "adorable_animals", 
-      likedByCount: "outras 99.159 pessoas"
+      likedByCount: 99159 
     }
   ]
 

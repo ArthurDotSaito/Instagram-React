@@ -5,7 +5,7 @@ export default function Usuario() {
     let [image, setImage] = React.useState("assets/img/catanacomics.svg")
 
     return (
-        <div className="usuario">
+        <div className="usuario" data-test="user">
             <UserItem user="catanacomics" userName={name} userImage={image}></UserItem>
         </div>
     )
@@ -13,12 +13,14 @@ export default function Usuario() {
     function UserItem(props) {
         return (
             <>
-                <img src={props.userImage} onClick = {changeUserImage}/>
+                <img src={props.userImage} onClick = {changeUserImage} data-test="profile-image"/>
                 <div className="texto">
                     <strong>{props.user}</strong>
-                    <span>
+                    <span data-test="name">
                     {props.userName}
-                        <ion-icon name="pencil" onClick={changeUserName}></ion-icon>
+                        <ion-icon name="pencil" 
+                        onClick={changeUserName}
+                        data-test="edit-name"></ion-icon>
                     </span>
                 </div>
             </>
