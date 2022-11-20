@@ -34,7 +34,7 @@ export default function Usuario() {
 
     function changeUserImage(){
         const changeImage = prompt("Digite o path para nova imagem:")
-        setName(changeImage);
+        setImage(changeImage);
     }
 }
 
