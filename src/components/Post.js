@@ -67,8 +67,9 @@ export default function Post(props) {
         }
     }
 
-    function likePostByClickOnPhoto(){
-        if(likedPost === false){
+    function likePostByClickOnPhoto(event){
+        if(likedPost === false && event.detail === 2){
+            console.log("double-click");
             setLikedPost(true);
             setLikeCount(likeCount + 1)
         }
